@@ -30,5 +30,6 @@ public class Test_LoginTest extends BaseClass{
 		home.logoutOfThePage();
 		log.isPageOpened();
 	}
+	
 
 }
