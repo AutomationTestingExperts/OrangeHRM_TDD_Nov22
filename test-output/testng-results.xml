@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="15276" started-at="2022-11-26T07:29:23Z" finished-at="2022-11-26T07:29:38Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="15276" started-at="2022-11-26T07:29:23Z" finished-at="2022-11-26T07:29:38Z">
+      <class name="com.orangeHRM.testCases.Test_LoginTest">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.orangeHRM.testCases.Test_LoginTest@26ba2a48]" name="beforeSuite" is-config="true" duration-ms="86" started-at="2022-11-26T12:59:23Z" finished-at="2022-11-26T12:59:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.orangeHRM.testCases.Test_LoginTest@26ba2a48]" name="beforeMethod" is-config="true" duration-ms="8436" started-at="2022-11-26T12:59:23Z" finished-at="2022-11-26T12:59:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.orangeHRM.testCases.Test_LoginTest.validateLoginPage()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="validateLoginPage()[pri:0, instance:com.orangeHRM.testCases.Test_LoginTest@26ba2a48]" name="validateLoginPage" duration-ms="5496" started-at="2022-11-26T12:59:31Z" finished-at="2022-11-26T12:59:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateLoginPage -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.orangeHRM.testCases.Test_LoginTest@26ba2a48]" name="afterMethod" is-config="true" duration-ms="1316" started-at="2022-11-26T12:59:37Z" finished-at="2022-11-26T12:59:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.orangeHRM.testCases.Test_LoginTest@26ba2a48]" name="afterSuite" is-config="true" duration-ms="1" started-at="2022-11-26T12:59:38Z" finished-at="2022-11-26T12:59:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.orangeHRM.testCases.Test_LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
