@@ -22,10 +22,10 @@ public class BaseClass {
 	public WebDriver driver;
 	public static ExtentTest report;
 	String reportsPath = "", htmlPath = "";
-	
+
 	@BeforeSuite
 	public void beforeSuite() {
-		reportsPath = System.getProperty("user.dir")+"//Reports//"+Util.getFolderName();
+		reportsPath = System.getProperty("user.dir") + "//Reports//" + Util.getFolderName();
 
 	}
 
@@ -35,32 +35,28 @@ public class BaseClass {
 		String url = Util.readProperty("url");
 		if (browser.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.driver.chromedriver",
-					"D:\\Workspace\\Workspace_OnlineClasses\\Oct22_7am_Selenium\\Drivers\\chromedriver.exe");
+					System.getProperty("user.dir") + "\\Drivers\\chromedriver.exe");
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.driver.geckodriver",
-					"D:\\Workspace\\Workspace_OnlineClasses\\Oct22_7am_Selenium\\Drivers\\chromedriver.exe");
+					System.getProperty("user.dir") + "\\Drivers\\chromedriver.exe");
 			driver = new FirefoxDriver();
 		} else if (browser.equalsIgnoreCase("edge")) {
 			System.setProperty("webdriver.driver.edgedriver",
-					"D:\\Workspace\\Workspace_OnlineClasses\\Oct22_7am_Selenium\\Drivers\\chromedriver.exe");
+					System.getProperty("user.dir") + "\\Drivers\\chromedriver.exe");
 			driver = new EdgeDriver();
 		} else if (browser.equalsIgnoreCase("safari")) {
 			System.setProperty("webdriver.driver.safaridriver",
-					"D:\\Workspace\\Workspace_OnlineClasses\\Oct22_7am_Selenium\\Drivers\\chromedriver.exe");
+					System.getProperty("user.dir") + "\\Drivers\\chromedriver.exe");
 			driver = new SafariDriver();
 		}
-		htmlPath = reportsPath+"\\"+method.getName()+".html";
-	 report = Report.startReport(htmlPath, method.getName(), "");
-
+		htmlPath = reportsPath + "\\" + method.getName() + "_" + Util.getRandomNumWithCurrentDate() + ".html";
+		report = Report.startReport(htmlPath, method.getName(), "");
 		report.info("************* Execution started ******************");
-		
 		driver.manage().window().maximize();
-
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
 		driver.get(url);
-		System.out.println(browser+" was launched, and '"+url+ "' opened.");
+		System.out.println(browser + " was launched, and '" + url + "' opened.");
 	}
 
 	@AfterMethod
@@ -69,7 +65,6 @@ public class BaseClass {
 			driver.quit();
 		}
 		Report.getReporter(htmlPath).flush();
-		
 		report.info("**************** Execution completed ****************");
 	}
 
